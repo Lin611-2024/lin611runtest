@@ -1,0 +1,20 @@
+{
+    "image": "ghcr.io/lin611-2024/devcontainer/bayesdevcontainer:4",
+    "features": {
+        "ghcr.io/rocker-org/devcontainer-features/rstudio-server": {
+            "singleUser": true
+        }
+    },
+    "postAttachCommand": {
+        "github_user": "echo \"GITHUB_USER=$GITHUB_USER\">>~/.Renviron && echo \"GITHUB_TOKEN=$GITHUB_TOKEN\">>~/.Renviron",
+        "rstudio-start": "rserver"
+    },
+    "forwardPorts": [
+        8787
+    ],
+    "portsAttributes": {
+        "8787": {
+            "label": "RStudio IDE"
+        }
+    }
+}
