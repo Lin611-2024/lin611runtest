@@ -13,7 +13,8 @@ makesource <- function(file_to_test){
   if (fs::path_ext(file_to_test) == "qmd"){
     knitr::purl(
       file_to_test,
-      output = new_path
+      output = new_path,
+      quiet = TRUE
     )
   } else if (fs::path_ext(file_to_test == "R")){
     fs::file_copy(
