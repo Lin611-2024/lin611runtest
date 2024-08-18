@@ -1,0 +1,5 @@
+Name: runtests
+Description: Run Tests
+Binding: runtests
+Interactive: false
+
